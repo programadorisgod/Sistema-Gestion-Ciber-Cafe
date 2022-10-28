@@ -161,5 +161,8 @@
   <ItemGroup>
     <None Include="Resources\new_add_user_16734.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload-webpage_icon-icons.com_53905.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

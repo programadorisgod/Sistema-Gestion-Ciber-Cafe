@@ -7,7 +7,7 @@ namespace Entidades
 {
     public class Cliente : Persona
     {
-        private String Correo
+       public String Correo
         {
             get => default;
             set
@@ -15,12 +15,16 @@ namespace Entidades
             }
         }
 
-        private String Direccion
+        public String Direccion
         {
             get => default;
             set
             {
             }
+        }
+        public override string ToString()
+        {
+            return string.Format(Cedula+";"+Nombre+";"+Telefono+";"+Direccion+";"+Correo+";");
         }
     }
 }

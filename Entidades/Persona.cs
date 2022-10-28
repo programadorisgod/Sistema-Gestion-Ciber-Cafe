@@ -7,7 +7,7 @@ namespace Entidades
 {
     public class Persona
     {
-        private int Cedula
+        public int Cedula
         {
             get => default;
             set
@@ -15,7 +15,7 @@ namespace Entidades
             }
         }
 
-        private String Nombre
+        public String Nombre
         {
             get => default;
             set
@@ -23,7 +23,7 @@ namespace Entidades
             }
         }
 
-        private String Telefono
+        public String Telefono
         {
             get => default;
             set

@@ -11,7 +11,7 @@
   <Class Name="Logica.ServicioCliente">
     <Position X="5.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAgAABAEAAAA=</HashCode>
       <FileName>ServicioCliente.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -23,10 +23,10 @@
       <FileName>IserviceAdmin.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Logica.IserviceCliente">
+  <Interface Name="Logica.IserviceCliente&lt;T&gt;">
     <Position X="5.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAgAABAEAAAA=</HashCode>
       <FileName>IserviceCliente.cs</FileName>
     </TypeIdentifier>
   </Interface>

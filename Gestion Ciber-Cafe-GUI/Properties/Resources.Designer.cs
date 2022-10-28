@@ -203,6 +203,16 @@ namespace Gestion_Ciber_Cafe_GUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reload_webpage_icon_icons_com_53905 {
+            get {
+                object obj = ResourceManager.GetObject("reload-webpage_icon-icons.com_53905", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap savetheapplication_guardar_2958 {
             get {
                 object obj = ResourceManager.GetObject("savetheapplication_guardar_2958", resourceCulture);

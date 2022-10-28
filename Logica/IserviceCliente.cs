@@ -5,7 +5,12 @@ using System.Text;
 
 namespace Logica
 {
-    public interface IserviceCliente
+    public interface IserviceCliente<T>
     {
+        string Guardar(T Cliente);
+        string Delete(int Indice);
+        string Edit(T Cedula);
+        List<T> GetAll();
+        bool Exists(T Cliente);
     }
 }
