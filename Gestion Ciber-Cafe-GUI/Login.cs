@@ -165,8 +165,28 @@ namespace Gestion_Ciber_Cafe_GUI
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                btnEntrar.Focus();
+                btnEntrar_Click_1(sender, e);
             }
+        }
+
+        private void pictureBox5_MouseMove(object sender, MouseEventArgs e)
+        {
+            pictureBox5.BackColor = Color.FromArgb(30, 30, 30);
+        }
+
+        private void pictureBox5_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox5.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
+        {
+            pictureBox4.BackColor = Color.FromArgb(30, 30, 30);
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
         }
     }
 }
