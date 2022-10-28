@@ -131,5 +131,42 @@ namespace Gestion_Ciber_Cafe_GUI
             labelError.Text = "    " + msg;
             labelError.Visible = true;
         }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txtContraseña.Focus();
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(e.KeyChar))
+            {
+                txtContraseña.Focus();
+            }
+
+        }
+
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtUsuario.Focus();
+            }
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnEntrar.Focus();
+            }
+        }
     }
 }

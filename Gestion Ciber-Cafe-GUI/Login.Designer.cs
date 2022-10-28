@@ -86,6 +86,8 @@
             this.txtUsuario.Tag = "Usuario...";
             this.txtUsuario.Text = "Usuario...";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtContraseña
@@ -100,6 +102,8 @@
             this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Text = "Contraseña...";
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
+            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // labelError
