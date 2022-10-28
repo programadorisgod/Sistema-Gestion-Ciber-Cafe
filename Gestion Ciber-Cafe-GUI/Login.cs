@@ -146,7 +146,7 @@ namespace Gestion_Ciber_Cafe_GUI
             {
                 e.Handled = true;
             }
-            if (e.KeyChar == Convert.ToChar(e.KeyChar))
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 txtContraseña.Focus();
             }
