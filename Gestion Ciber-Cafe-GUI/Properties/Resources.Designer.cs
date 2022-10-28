@@ -63,6 +63,16 @@ namespace Gestion_Ciber_Cafe_GUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_4219 {
+            get {
+                object obj = ResourceManager.GetObject("delete_4219", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap equis_salir {
             get {
                 object obj = ResourceManager.GetObject("equis salir", resourceCulture);
@@ -143,9 +153,29 @@ namespace Gestion_Ciber_Cafe_GUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_add_user_16734 {
+            get {
+                object obj = ResourceManager.GetObject("new_add_user_16734", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nubes_sobre_las_montanas_6016x3384_xtrafondos_com {
             get {
                 object obj = ResourceManager.GetObject("nubes-sobre-las-montanas_6016x3384_xtrafondos.com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pencil_striped_symbol_for_interface_edit_buttons_icon_icons_com_56782 {
+            get {
+                object obj = ResourceManager.GetObject("pencil-striped-symbol-for-interface-edit-buttons_icon-icons.com_56782", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +196,36 @@ namespace Gestion_Ciber_Cafe_GUI.Properties {
         internal static System.Drawing.Bitmap pexels_uzunov_rostislav_50116471 {
             get {
                 object obj = ResourceManager.GetObject("pexels-uzunov-rostislav-50116471", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap savetheapplication_guardar_2958 {
+            get {
+                object obj = ResourceManager.GetObject("savetheapplication_guardar_2958", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_add_new_insert_icon_205822 {
+            get {
+                object obj = ResourceManager.GetObject("user_add_new_insert_icon_205822", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_add_new_insert_icon_2058221 {
+            get {
+                object obj = ResourceManager.GetObject("user_add_new_insert_icon_2058221", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

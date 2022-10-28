@@ -7,7 +7,7 @@ namespace Entidades
 {
     public class Persona
     {
-        private int ID
+        private int Cedula
         {
             get => default;
             set
