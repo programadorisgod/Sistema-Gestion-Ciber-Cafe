@@ -49,7 +49,7 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox5.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.minimizar1;
-            this.pictureBox5.Location = new System.Drawing.Point(855, 10);
+            this.pictureBox5.Location = new System.Drawing.Point(885, 10);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(28, 23);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -64,7 +64,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox4.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.equis_salir;
-            this.pictureBox4.Location = new System.Drawing.Point(883, 10);
+            this.pictureBox4.Location = new System.Drawing.Point(913, 10);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(29, 23);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,7 +84,7 @@
             this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.panelMenuLateral.Name = "panelMenuLateral";
-            this.panelMenuLateral.Size = new System.Drawing.Size(250, 661);
+            this.panelMenuLateral.Size = new System.Drawing.Size(250, 500);
             this.panelMenuLateral.TabIndex = 11;
             // 
             // panelLogo
@@ -111,6 +111,7 @@
             this.btnEntradas.Text = "Entradas";
             this.btnEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntradas.UseVisualStyleBackColor = true;
+            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
             // 
             // panelSubMenuEntradas
             // 
@@ -140,6 +141,7 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnListar
             // 
@@ -157,6 +159,7 @@
             this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnBuscar
             // 
@@ -174,19 +177,21 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(921, 661);
+            this.ClientSize = new System.Drawing.Size(951, 500);
             this.Controls.Add(this.panelMenuLateral);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(951, 500);
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);

@@ -15,14 +15,36 @@ namespace Gestion_Ciber_Cafe_GUI
         public Principal()
         {
             InitializeComponent();
-            
+            PersonalizarDiseño();
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
 
         }
-
+        private void PersonalizarDiseño()
+        {
+            panelSubMenuEntradas.Visible = false;
+        }
+        private void OcultarSubmenu()
+        {
+            if (panelSubMenuEntradas.Visible == true)
+            {
+                panelSubMenuEntradas.Visible = false;
+            }
+        }
+        private void MostrarSubmenu(Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                OcultarSubmenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+        }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -51,6 +73,29 @@ namespace Gestion_Ciber_Cafe_GUI
         private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
         {
             pictureBox4.BackColor = Color.FromArgb(30, 30, 30);
+        }
+
+        private void btnEntradas_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(panelSubMenuEntradas);
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            //Codigo...
+            OcultarSubmenu();
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            //Codigo...
+            OcultarSubmenu();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //Codigo...
+            OcultarSubmenu();
         }
     }
 }
