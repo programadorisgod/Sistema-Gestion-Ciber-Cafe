@@ -31,8 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.btnEntradas = new System.Windows.Forms.Button();
+            this.panelSubMenuEntradas = new System.Windows.Forms.Panel();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panelMenuLateral.SuspendLayout();
+            this.panelSubMenuEntradas.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -65,12 +74,114 @@
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
             // 
+            // panelMenuLateral
+            // 
+            this.panelMenuLateral.AutoScroll = true;
+            this.panelMenuLateral.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panelMenuLateral.Controls.Add(this.panelSubMenuEntradas);
+            this.panelMenuLateral.Controls.Add(this.btnEntradas);
+            this.panelMenuLateral.Controls.Add(this.panelLogo);
+            this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
+            this.panelMenuLateral.Name = "panelMenuLateral";
+            this.panelMenuLateral.Size = new System.Drawing.Size(250, 661);
+            this.panelMenuLateral.TabIndex = 11;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // btnEntradas
+            // 
+            this.btnEntradas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEntradas.FlatAppearance.BorderSize = 0;
+            this.btnEntradas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntradas.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntradas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEntradas.Location = new System.Drawing.Point(0, 100);
+            this.btnEntradas.Name = "btnEntradas";
+            this.btnEntradas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEntradas.Size = new System.Drawing.Size(250, 45);
+            this.btnEntradas.TabIndex = 1;
+            this.btnEntradas.Text = "Entradas";
+            this.btnEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntradas.UseVisualStyleBackColor = true;
+            // 
+            // panelSubMenuEntradas
+            // 
+            this.panelSubMenuEntradas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panelSubMenuEntradas.Controls.Add(this.btnBuscar);
+            this.panelSubMenuEntradas.Controls.Add(this.btnListar);
+            this.panelSubMenuEntradas.Controls.Add(this.btnNuevo);
+            this.panelSubMenuEntradas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuEntradas.Location = new System.Drawing.Point(0, 145);
+            this.panelSubMenuEntradas.Name = "panelSubMenuEntradas";
+            this.panelSubMenuEntradas.Size = new System.Drawing.Size(250, 121);
+            this.panelSubMenuEntradas.TabIndex = 2;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.LightGray;
+            this.btnNuevo.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnNuevo.Size = new System.Drawing.Size(250, 40);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnListar
+            // 
+            this.btnListar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListar.FlatAppearance.BorderSize = 0;
+            this.btnListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnListar.Location = new System.Drawing.Point(0, 40);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnListar.Size = new System.Drawing.Size(250, 40);
+            this.btnListar.TabIndex = 1;
+            this.btnListar.Text = "Listar";
+            this.btnListar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListar.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnBuscar.Location = new System.Drawing.Point(0, 80);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnBuscar.Size = new System.Drawing.Size(250, 40);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(921, 661);
+            this.Controls.Add(this.panelMenuLateral);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -81,6 +192,8 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panelMenuLateral.ResumeLayout(false);
+            this.panelSubMenuEntradas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -89,6 +202,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panelMenuLateral;
+        private System.Windows.Forms.Panel panelSubMenuEntradas;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnEntradas;
+        private System.Windows.Forms.Panel panelLogo;
     }
 }
 
