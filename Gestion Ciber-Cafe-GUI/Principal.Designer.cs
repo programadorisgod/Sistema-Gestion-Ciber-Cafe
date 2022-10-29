@@ -35,13 +35,19 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnEntradas = new System.Windows.Forms.Button();
             this.panelSubMenuEntradas = new System.Windows.Forms.Panel();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnNuevoEntrada = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.panelSubmenuProductos = new System.Windows.Forms.Panel();
+            this.btnNuevoProducto = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelMenuLateral.SuspendLayout();
             this.panelSubMenuEntradas.SuspendLayout();
+            this.panelSubmenuProductos.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -78,6 +84,9 @@
             // 
             this.panelMenuLateral.AutoScroll = true;
             this.panelMenuLateral.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panelMenuLateral.Controls.Add(this.btnClientes);
+            this.panelMenuLateral.Controls.Add(this.panelSubmenuProductos);
+            this.panelMenuLateral.Controls.Add(this.btnProductos);
             this.panelMenuLateral.Controls.Add(this.panelSubMenuEntradas);
             this.panelMenuLateral.Controls.Add(this.btnEntradas);
             this.panelMenuLateral.Controls.Add(this.panelLogo);
@@ -118,30 +127,30 @@
             this.panelSubMenuEntradas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panelSubMenuEntradas.Controls.Add(this.btnBuscar);
             this.panelSubMenuEntradas.Controls.Add(this.btnListar);
-            this.panelSubMenuEntradas.Controls.Add(this.btnNuevo);
+            this.panelSubMenuEntradas.Controls.Add(this.btnNuevoEntrada);
             this.panelSubMenuEntradas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuEntradas.Location = new System.Drawing.Point(0, 145);
             this.panelSubMenuEntradas.Name = "panelSubMenuEntradas";
             this.panelSubMenuEntradas.Size = new System.Drawing.Size(250, 121);
             this.panelSubMenuEntradas.TabIndex = 2;
             // 
-            // btnNuevo
+            // btnNuevoEntrada
             // 
-            this.btnNuevo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.LightGray;
-            this.btnNuevo.Location = new System.Drawing.Point(0, 0);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnNuevo.Size = new System.Drawing.Size(250, 40);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.btnNuevoEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevoEntrada.FlatAppearance.BorderSize = 0;
+            this.btnNuevoEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnNuevoEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoEntrada.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoEntrada.ForeColor = System.Drawing.Color.LightGray;
+            this.btnNuevoEntrada.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevoEntrada.Name = "btnNuevoEntrada";
+            this.btnNuevoEntrada.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnNuevoEntrada.Size = new System.Drawing.Size(250, 40);
+            this.btnNuevoEntrada.TabIndex = 0;
+            this.btnNuevoEntrada.Text = "Nuevo";
+            this.btnNuevoEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoEntrada.UseVisualStyleBackColor = true;
+            this.btnNuevoEntrada.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnListar
             // 
@@ -179,6 +188,89 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // btnProductos
+            // 
+            this.btnProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProductos.Location = new System.Drawing.Point(0, 266);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnProductos.Size = new System.Drawing.Size(250, 45);
+            this.btnProductos.TabIndex = 3;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
+            // panelSubmenuProductos
+            // 
+            this.panelSubmenuProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panelSubmenuProductos.Controls.Add(this.btnCargar);
+            this.panelSubmenuProductos.Controls.Add(this.btnNuevoProducto);
+            this.panelSubmenuProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubmenuProductos.Location = new System.Drawing.Point(0, 311);
+            this.panelSubmenuProductos.Name = "panelSubmenuProductos";
+            this.panelSubmenuProductos.Size = new System.Drawing.Size(250, 80);
+            this.panelSubmenuProductos.TabIndex = 4;
+            // 
+            // btnNuevoProducto
+            // 
+            this.btnNuevoProducto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevoProducto.FlatAppearance.BorderSize = 0;
+            this.btnNuevoProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoProducto.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoProducto.ForeColor = System.Drawing.Color.LightGray;
+            this.btnNuevoProducto.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevoProducto.Name = "btnNuevoProducto";
+            this.btnNuevoProducto.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnNuevoProducto.Size = new System.Drawing.Size(250, 40);
+            this.btnNuevoProducto.TabIndex = 0;
+            this.btnNuevoProducto.Text = "Nuevo";
+            this.btnNuevoProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoProducto.UseVisualStyleBackColor = true;
+            this.btnNuevoProducto.Click += new System.EventHandler(this.btnNuevoProducto_Click);
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCargar.FlatAppearance.BorderSize = 0;
+            this.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnCargar.Location = new System.Drawing.Point(0, 40);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnCargar.Size = new System.Drawing.Size(250, 40);
+            this.btnCargar.TabIndex = 1;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnClientes.Location = new System.Drawing.Point(0, 391);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnClientes.Size = new System.Drawing.Size(250, 45);
+            this.btnClientes.TabIndex = 5;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +292,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelMenuLateral.ResumeLayout(false);
             this.panelSubMenuEntradas.ResumeLayout(false);
+            this.panelSubmenuProductos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -212,9 +305,14 @@
         private System.Windows.Forms.Panel panelSubMenuEntradas;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnNuevoEntrada;
         private System.Windows.Forms.Button btnEntradas;
         private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelSubmenuProductos;
+        private System.Windows.Forms.Button btnNuevoProducto;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnCargar;
     }
 }
 
