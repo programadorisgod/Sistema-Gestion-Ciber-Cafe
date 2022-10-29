@@ -120,5 +120,11 @@ namespace Gestion_Ciber_Cafe_GUI
         {
             Editar();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Guardar();
+            Limpiar();
+        }
     }
 }

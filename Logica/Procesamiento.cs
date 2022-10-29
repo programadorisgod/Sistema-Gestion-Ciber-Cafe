@@ -9,7 +9,7 @@ namespace Logica
 {
     public class Procesamiento
     {
-        Datos.Archivo Archivo = new Datos.Archivo();
+        Datos.RepositorioUsuario Archivo = new Datos.RepositorioUsuario();
         List<Usuario> ListaUsuario = new List<Usuario>();
 
         public List<Usuario> GetAll()
