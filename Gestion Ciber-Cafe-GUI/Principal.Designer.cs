@@ -195,6 +195,7 @@
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Principal_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelMenuLateral.ResumeLayout(false);
