@@ -13,7 +13,7 @@ using Entidades;
 namespace Gestion_Ciber_Cafe_GUI
 {
     public partial class Clientes : Form
-       
+
     {
         int p = 0;
         Entidades.Cliente cliente = new Entidades.Cliente();
@@ -37,7 +37,7 @@ namespace Gestion_Ciber_Cafe_GUI
             cliente.Telefono = txtTelefono.Text;
             cliente.Direccion = txtDireccion.Text;
             cliente.Correo = txtCorreo.Text;
-            if (txtcedula.Text ==" " || txtnombre.Text ==" " || txtTelefono.Text ==" " || txtDireccion.Text == " " || txtCorreo.Text == " ")
+            if (txtcedula.Text == " " || txtnombre.Text == " " || txtTelefono.Text == " " || txtDireccion.Text == " " || txtCorreo.Text == " ")
             {
                 MessageBox.Show("Llene todos los campos, por favor");
             }
@@ -54,9 +54,9 @@ namespace Gestion_Ciber_Cafe_GUI
         }
         void CargarTabla()
         {
-            foreach(var item in servicioCliente.GetAll())
+            foreach (var item in servicioCliente.GetAll())
             {
-                dataGridView1.Rows.Add(item.Cedula, item.Nombre, item.Telefono, item.Direccion, item.Correo );
+                dataGridView1.Rows.Add(item.Cedula, item.Nombre, item.Telefono, item.Direccion, item.Correo);
             }
         }
 
@@ -68,11 +68,11 @@ namespace Gestion_Ciber_Cafe_GUI
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             p = e.RowIndex;
-            if (p!= 1)
+            if (p != 1)
             {
                 VerClientes(servicioCliente.GetAll()[e.RowIndex]);
             }
-           
+
         }
         void VerClientes(Entidades.Cliente cliente)
         {
@@ -84,20 +84,20 @@ namespace Gestion_Ciber_Cafe_GUI
         }
         void Editar()
         {
-                cliente.Cedula = int.Parse(txtcedula.Text);
-                cliente.Nombre = txtnombre.Text;
-                cliente.Telefono = txtTelefono.Text;
-                cliente.Direccion = txtDireccion.Text;
-                cliente.Correo = txtCorreo.Text;
-                dataGridView1[1, p].Value = txtcedula.Text;
-                dataGridView1[2, p].Value = txtnombre.Text;
-                dataGridView1[3, p].Value = txtTelefono.Text;
-                dataGridView1[4, p].Value = txtDireccion.Text;
-                dataGridView1[5, p].Value = txtCorreo.Text;
-                var mensaje = servicioCliente.Edit(cliente);
-                MessageBox.Show(mensaje);
-                Limpiar();
-                txtnombre.Focus();
+            cliente.Cedula = int.Parse(txtcedula.Text);
+            cliente.Nombre = txtnombre.Text;
+            cliente.Telefono = txtTelefono.Text;
+            cliente.Direccion = txtDireccion.Text;
+            cliente.Correo = txtCorreo.Text;
+            dataGridView1[1, p].Value = txtcedula.Text;
+            dataGridView1[2, p].Value = txtnombre.Text;
+            dataGridView1[3, p].Value = txtTelefono.Text;
+            dataGridView1[4, p].Value = txtDireccion.Text;
+            dataGridView1[5, p].Value = txtCorreo.Text;
+            var mensaje = servicioCliente.Edit(cliente);
+            MessageBox.Show(mensaje);
+            Limpiar();
+            txtnombre.Focus();
         }
         private void pictureBox6_Click(object sender, EventArgs e)
         {
@@ -108,7 +108,7 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (p!=1)
+            if (p != 1)
             {
                 dataGridView1.Rows.RemoveAt(p);
                 var mensaje = servicioCliente.Delete(p);
@@ -125,6 +125,122 @@ namespace Gestion_Ciber_Cafe_GUI
         {
             Guardar();
             Limpiar();
+        }
+
+        private void txtcedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtnombre.Focus();
+            }
+        }
+
+        private void txtcedula_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Down)
+            {
+                txtnombre.Focus();
+            }
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtTelefono.Focus();
+            }
+        }
+
+        private void txtnombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtcedula.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                txtTelefono.Focus();
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtDireccion.Focus();
+            }
+        }
+
+        private void txtTelefono_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtnombre.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                txtDireccion.Focus();
+            }
+        }
+
+        private void txtDireccion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtTelefono.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                txtCorreo.Focus();
+            }
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtCorreo.Focus();
+            }
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                pictureBox1.Focus();
+            }
+        }
+        private void txtCorreo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtDireccion.Focus();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                pictureBox1.Focus();
+            }
         }
     }
 }
