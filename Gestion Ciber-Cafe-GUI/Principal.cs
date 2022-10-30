@@ -120,7 +120,8 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void btnNuevoProducto_Click(object sender, EventArgs e)
         {
-            //Codigo...
+            Productos productos = new Productos();
+            productos.Show();
             OcultarSubmenu();
         }
 
