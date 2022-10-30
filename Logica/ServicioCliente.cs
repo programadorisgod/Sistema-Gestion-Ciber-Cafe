@@ -37,7 +37,7 @@ namespace Logica
 
         public string Edit(Cliente Cliente_new)
         {
-            Cliente cliente_actual = GetById(Cliente_new);
+            Cliente cliente_actual = GetByAll(Cliente_new);
             try
             {
                 if (cliente_actual == null)
@@ -85,7 +85,7 @@ namespace Logica
             string Guardado = string.Empty;
             try
             {
-                if (GetById(Cliente) == null)
+                if (GetByAll(Cliente) == null)
                 {
                     Guardado = repositorioCliente.Guardar(Cliente);
                     return Guardado;
@@ -104,11 +104,12 @@ namespace Logica
         }
        
 
-        public Cliente GetById(Cliente cliente)
+        public Cliente GetByAll(Cliente cliente)
         {
             foreach (Cliente item in clienteList)
             {
-                if (item.Cedula == cliente.Cedula)
+                if (item.Cedula == cliente.Cedula || item.Nombre == cliente.Nombre 
+                    || item.Telefono == cliente.Telefono || item.Correo == cliente.Correo)
                 {
                     return item;
                 }

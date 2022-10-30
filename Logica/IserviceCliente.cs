@@ -12,6 +12,6 @@ namespace Logica
         string Edit(T Cedula);
         List<T> GetAll();
         bool Exists(T Cliente);
-        T GetById(T Cliente);
+        T GetByAll(T Cliente);
     }
 }
