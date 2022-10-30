@@ -136,7 +136,6 @@ namespace Gestion_Ciber_Cafe_GUI
             //Codigo...
             Clientes  clientes = new Clientes();
             clientes.Show();
-            this.Hide();
             OcultarSubmenu();
         }
     }

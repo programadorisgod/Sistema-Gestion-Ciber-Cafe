@@ -214,10 +214,7 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 txtCorreo.Focus();

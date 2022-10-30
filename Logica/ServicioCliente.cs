@@ -9,11 +9,14 @@ namespace Logica
 {
     public class ServicioCliente : IserviceCliente<Cliente>
     {
+        
         List<Cliente> clienteList;
         RepositorioCliente repositorioCliente = new RepositorioCliente();
         public ServicioCliente()
         {
+            clienteList = new List<Cliente>();
             clienteList = repositorioCliente.GetAll();
+           
         }
         public string Delete(int indice)
         {
@@ -54,7 +57,6 @@ namespace Logica
             }
             catch (Exception)
             {
-
                 return "Cliente no editado";
             }
             
@@ -102,12 +104,11 @@ namespace Logica
         }
        
 
-        public Cliente GetById(Cliente Cliente)
+        public Cliente GetById(Cliente cliente)
         {
-            List<Cliente> clientes = GetAll();
-            foreach (Cliente item in clientes)
+            foreach (Cliente item in clienteList)
             {
-                if (item.Cedula == item.Cedula)
+                if (item.Cedula == cliente.Cedula)
                 {
                     return item;
                 }
