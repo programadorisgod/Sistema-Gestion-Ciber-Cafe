@@ -176,5 +176,8 @@
   <ItemGroup>
     <None Include="Resources\searcher_magnifyng_glass_search_locate_find_icon_123813.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64673.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

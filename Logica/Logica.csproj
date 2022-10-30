@@ -46,6 +46,7 @@
     <Compile Include="Procesamiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicioCliente.cs" />
+    <Compile Include="ServicioProducto.cs" />
     <Compile Include="ServiciosAdministrador.cs" />
   </ItemGroup>
   <ItemGroup>

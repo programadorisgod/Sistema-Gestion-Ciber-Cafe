@@ -7,36 +7,17 @@ namespace Entidades
 {
     public class Producto
     {
-        private String Codigo
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Codigo { get; set; }
 
-        private String Nombre
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Nombre { get; set; }
 
-        private String Descripcion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Descripcion { get; set; }
 
-        private Double ValorVenta
+        public double ValorVenta { get; set; }
+
+        public override string ToString()
         {
-            get => default;
-            set
-            {
-            }
+            return string.Format(Codigo + ";" + Nombre + ";" + Descripcion + ";" + ValorVenta);
         }
     }
 }
