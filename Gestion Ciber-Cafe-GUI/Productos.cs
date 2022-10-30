@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,10 @@ namespace Gestion_Ciber_Cafe_GUI
             InitializeComponent();
             RefreshLista();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         void RefreshLista()
         {
             grillaListaProductos.DataSource = servicioProducto.GetAll();
@@ -88,11 +93,13 @@ namespace Gestion_Ciber_Cafe_GUI
         private void pictureBox6_MouseLeave(object sender, EventArgs e)
         {
             pictureBox6.BackColor = Color.Transparent;
+            pictureBox6.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void pictureBox6_MouseMove(object sender, MouseEventArgs e)
         {
             pictureBox6.BackColor = Color.PowderBlue;
+            pictureBox6.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -105,6 +112,12 @@ namespace Gestion_Ciber_Cafe_GUI
         private void Productos_Load(object sender, EventArgs e)
         {
             textBoxCodigo.Focus();
+        }
+
+        private void Productos_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
