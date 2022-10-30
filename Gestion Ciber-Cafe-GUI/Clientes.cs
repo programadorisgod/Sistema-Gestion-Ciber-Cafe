@@ -249,5 +249,10 @@ namespace Gestion_Ciber_Cafe_GUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+             
+        }
     }
 }
