@@ -43,11 +43,16 @@
             this.btnNuevoEntrada = new System.Windows.Forms.Button();
             this.btnEntradas = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.labelTitulo1 = new System.Windows.Forms.Label();
+            this.labelTitulo2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelMenuLateral.SuspendLayout();
             this.panelSubmenuProductos.SuspendLayout();
             this.panelSubMenuEntradas.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -102,7 +107,7 @@
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnClientes.Location = new System.Drawing.Point(0, 391);
             this.btnClientes.Name = "btnClientes";
@@ -131,7 +136,7 @@
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.Color.LightGray;
             this.btnCargar.Location = new System.Drawing.Point(0, 40);
             this.btnCargar.Name = "btnCargar";
@@ -149,7 +154,7 @@
             this.btnNuevoProducto.FlatAppearance.BorderSize = 0;
             this.btnNuevoProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoProducto.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoProducto.ForeColor = System.Drawing.Color.LightGray;
             this.btnNuevoProducto.Location = new System.Drawing.Point(0, 0);
             this.btnNuevoProducto.Name = "btnNuevoProducto";
@@ -167,7 +172,7 @@
             this.btnProductos.FlatAppearance.BorderSize = 0;
             this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductos.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnProductos.Location = new System.Drawing.Point(0, 266);
             this.btnProductos.Name = "btnProductos";
@@ -197,7 +202,7 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.LightGray;
             this.btnBuscar.Location = new System.Drawing.Point(0, 80);
             this.btnBuscar.Name = "btnBuscar";
@@ -215,7 +220,7 @@
             this.btnListar.FlatAppearance.BorderSize = 0;
             this.btnListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.ForeColor = System.Drawing.Color.LightGray;
             this.btnListar.Location = new System.Drawing.Point(0, 40);
             this.btnListar.Name = "btnListar";
@@ -233,7 +238,7 @@
             this.btnNuevoEntrada.FlatAppearance.BorderSize = 0;
             this.btnNuevoEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnNuevoEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoEntrada.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoEntrada.ForeColor = System.Drawing.Color.LightGray;
             this.btnNuevoEntrada.Location = new System.Drawing.Point(0, 0);
             this.btnNuevoEntrada.Name = "btnNuevoEntrada";
@@ -251,7 +256,7 @@
             this.btnEntradas.FlatAppearance.BorderSize = 0;
             this.btnEntradas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.btnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntradas.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntradas.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnEntradas.Location = new System.Drawing.Point(0, 100);
             this.btnEntradas.Name = "btnEntradas";
@@ -265,11 +270,49 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelLogo.Controls.Add(this.labelTitulo2);
+            this.panelLogo.Controls.Add(this.labelTitulo1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Location = new System.Drawing.Point(467, 55);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(303, 336);
+            this.pictureBoxLogo.TabIndex = 12;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // labelTitulo1
+            // 
+            this.labelTitulo1.AutoSize = true;
+            this.labelTitulo1.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitulo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelTitulo1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo1.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.labelTitulo1.Location = new System.Drawing.Point(43, 24);
+            this.labelTitulo1.Margin = new System.Windows.Forms.Padding(0);
+            this.labelTitulo1.Name = "labelTitulo1";
+            this.labelTitulo1.Size = new System.Drawing.Size(94, 25);
+            this.labelTitulo1.TabIndex = 0;
+            this.labelTitulo1.Text = "Sistema";
+            // 
+            // labelTitulo2
+            // 
+            this.labelTitulo2.AutoSize = true;
+            this.labelTitulo2.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitulo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelTitulo2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo2.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.labelTitulo2.Location = new System.Drawing.Point(72, 47);
+            this.labelTitulo2.Name = "labelTitulo2";
+            this.labelTitulo2.Size = new System.Drawing.Size(121, 25);
+            this.labelTitulo2.TabIndex = 1;
+            this.labelTitulo2.Text = "Inventario";
             // 
             // Principal
             // 
@@ -277,6 +320,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(951, 500);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.panelMenuLateral);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -293,6 +337,9 @@
             this.panelMenuLateral.ResumeLayout(false);
             this.panelSubmenuProductos.ResumeLayout(false);
             this.panelSubMenuEntradas.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,6 +360,9 @@
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Label labelTitulo2;
+        private System.Windows.Forms.Label labelTitulo1;
     }
 }
 

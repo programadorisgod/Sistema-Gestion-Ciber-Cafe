@@ -24,7 +24,8 @@ namespace Gestion_Ciber_Cafe_GUI
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            pictureBoxLogo.Image = Image.FromFile("Logo-unscreen.gif");
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         private void PersonalizarDiseño()
         {
