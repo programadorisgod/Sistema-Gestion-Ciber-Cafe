@@ -7,28 +7,21 @@ namespace Entidades
 {
     public class Persona
     {
-        public int Cedula
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int Cedula { get; set; }
 
-        public String Nombre
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Nombre { get; set; }
 
-        public String Telefono
+        public  string Telefono { get; set; }
+
+        public Persona(int Cedula, string Nombre, string Telefono)
         {
-            get => default;
-            set
-            {
-            }
+            this.Cedula = Cedula;
+            this.Nombre = Nombre;
+            this.Telefono = Telefono;
+        }
+        public Persona()
+        {
+
         }
     }
 }

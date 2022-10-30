@@ -56,12 +56,12 @@ namespace Datos
 
         public string Actualizar(List<Cliente> clientes, bool modo)
         {
-            StreamWriter writer = new StreamWriter(ruta);
+            StreamWriter escritor = new StreamWriter(ruta, modo);
             foreach (var item in clientes)
             {
-                writer.WriteLine(item.ToString());
+                escritor.WriteLine(item.ToString());
             }
-            writer.Close();
+            escritor.Close();
             return "Proceso Terminado";
         }
 

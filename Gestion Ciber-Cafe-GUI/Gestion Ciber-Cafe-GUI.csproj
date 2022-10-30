@@ -173,5 +173,8 @@
   <ItemGroup>
     <None Include="Resources\reload-webpage_icon-icons.com_53905.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searcher_magnifyng_glass_search_locate_find_icon_123813.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -48,7 +48,7 @@ namespace Gestion_Ciber_Cafe_GUI
             }
             else
             {
-                var Respuesta = MessageBox.Show("Desea guardar el contacto?", "Responde...", MessageBoxButtons.YesNoCancel);
+                var Respuesta = MessageBox.Show("Desea guardar el cliente?", "Responde...", MessageBoxButtons.YesNoCancel);
                 if (Respuesta == DialogResult.Yes)
                 {
                     var mensaje = servicioCliente.Guardar(cliente);
@@ -68,16 +68,17 @@ namespace Gestion_Ciber_Cafe_GUI
         private void Clientes_Load(object sender, EventArgs e)
         {
             CargarTabla();
+            txtcedula.Focus();
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             p = e.RowIndex;
-            if (p != 1)
+            if (p != -1)
             {
-                VerClientes(servicioCliente.GetAll()[e.RowIndex]);
+                VerClientes(servicioCliente.GetAll()[p]);
             }
-
+            tabControl1.SelectedIndex = 0;
         }
         void VerClientes(Entidades.Cliente cliente)
         {
@@ -94,20 +95,18 @@ namespace Gestion_Ciber_Cafe_GUI
             cliente.Telefono = txtTelefono.Text;
             cliente.Direccion = txtDireccion.Text;
             cliente.Correo = txtCorreo.Text;
-            dataGridView1[1, p].Value = txtcedula.Text;
-            dataGridView1[2, p].Value = txtnombre.Text;
-            dataGridView1[3, p].Value = txtTelefono.Text;
-            dataGridView1[4, p].Value = txtDireccion.Text;
-            dataGridView1[5, p].Value = txtCorreo.Text;
+            dataGridView1[0, p].Value = txtcedula.Text;
+            dataGridView1[1, p].Value = txtnombre.Text;
+            dataGridView1[2, p].Value = txtTelefono.Text;
+            dataGridView1[3, p].Value = txtDireccion.Text;
+            dataGridView1[4, p].Value = txtCorreo.Text;
             var mensaje = servicioCliente.Edit(cliente);
             MessageBox.Show(mensaje);
             Limpiar();
-            txtnombre.Focus();
+            txtcedula.Focus();
         }
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            var P = new Principal();
-            P.Show();
             this.Hide();
         }
 
@@ -179,7 +178,7 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }

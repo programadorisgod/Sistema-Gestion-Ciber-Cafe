@@ -134,6 +134,9 @@ namespace Gestion_Ciber_Cafe_GUI
         private void btnClientes_Click(object sender, EventArgs e)
         {
             //Codigo...
+            Clientes  clientes = new Clientes();
+            clientes.Show();
+            this.Hide();
             OcultarSubmenu();
         }
     }

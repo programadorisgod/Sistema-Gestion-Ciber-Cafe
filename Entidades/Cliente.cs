@@ -7,24 +7,13 @@ namespace Entidades
 {
     public class Cliente : Persona
     {
-       public String Correo
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
-        public String Direccion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Correo { get; set; }
+        public string Direccion { get; set; }
+
         public override string ToString()
         {
-            return string.Format(Cedula+";"+Nombre+";"+Telefono+";"+Direccion+";"+Correo+";");
+            return string.Format(Cedula + ";" + Nombre + ";" + Telefono + ";" + Direccion + ";" + Correo + ";");
         }
     }
 }

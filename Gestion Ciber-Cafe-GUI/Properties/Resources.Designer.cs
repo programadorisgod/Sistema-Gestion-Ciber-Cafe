@@ -223,6 +223,16 @@ namespace Gestion_Ciber_Cafe_GUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap searcher_magnifyng_glass_search_locate_find_icon_123813 {
+            get {
+                object obj = ResourceManager.GetObject("searcher_magnifyng_glass_search_locate_find_icon_123813", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_add_new_insert_icon_205822 {
             get {
                 object obj = ResourceManager.GetObject("user_add_new_insert_icon_205822", resourceCulture);

@@ -31,9 +31,10 @@ namespace Logica
             }
         }
 
+
         public string Edit(Cliente Cliente_new)
         {
-            Cliente cliente_actual = Buscar(Cliente_new.Cedula);
+            Cliente cliente_actual = GetById(Cliente_new);
             try
             {
                 if (cliente_actual == null)
@@ -54,8 +55,9 @@ namespace Logica
             catch (Exception)
             {
 
-                return "Contacto no editado";
+                return "Cliente no editado";
             }
+            
         }
 
         public bool Exists(Cliente Cliente)
@@ -81,12 +83,16 @@ namespace Logica
             string Guardado = string.Empty;
             try
             {
-                if (Buscar(Cliente.Cedula) == null)
+                if (GetById(Cliente) == null)
                 {
                     Guardado = repositorioCliente.Guardar(Cliente);
-
+                    return Guardado;
                 }
-                return Guardado;
+                else
+                {
+                    return "Ya existe un cliente con esa cedula";
+                }
+
             }
             catch (Exception)
             {
@@ -94,12 +100,14 @@ namespace Logica
 
             }
         }
-        public Cliente Buscar(int cedula)
+       
+
+        public Cliente GetById(Cliente Cliente)
         {
             List<Cliente> clientes = GetAll();
             foreach (Cliente item in clientes)
             {
-                if (item.Cedula == cedula)
+                if (item.Cedula == item.Cedula)
                 {
                     return item;
                 }
