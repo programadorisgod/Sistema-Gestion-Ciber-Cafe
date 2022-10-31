@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPageNuevo = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
             this.grillaListaProductos = new System.Windows.Forms.DataGridView();
@@ -53,25 +54,24 @@
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.labelCodigo = new System.Windows.Forms.Label();
             this.labelDetalleProducto = new System.Windows.Forms.Label();
-            this.tabPageCargar = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tabPageCargar = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabPrincipal.SuspendLayout();
             this.tabPageNuevo.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaListaProductos)).BeginInit();
             this.panelLateralDetalleProducto.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPrincipal
@@ -106,6 +106,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.Controls.Add(this.pictureBox6);
@@ -118,6 +121,21 @@
             this.panel1.Size = new System.Drawing.Size(714, 435);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources._64673;
+            this.pictureBox6.Location = new System.Drawing.Point(679, 24);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(22, 20);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
+            this.pictureBox6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseMove);
             // 
             // textBoxBuscar
             // 
@@ -142,43 +160,45 @@
             // 
             // grillaListaProductos
             // 
-            this.grillaListaProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.grillaListaProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grillaListaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grillaListaProductos.BackgroundColor = System.Drawing.Color.Azure;
             this.grillaListaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grillaListaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grillaListaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaListaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaListaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grillaListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaListaProductos.Location = new System.Drawing.Point(11, 51);
             this.grillaListaProductos.MultiSelect = false;
             this.grillaListaProductos.Name = "grillaListaProductos";
             this.grillaListaProductos.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaListaProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaListaProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grillaListaProductos.RowHeadersVisible = false;
             this.grillaListaProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grillaListaProductos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grillaListaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grillaListaProductos.Size = new System.Drawing.Size(690, 372);
             this.grillaListaProductos.TabIndex = 2;
+            this.grillaListaProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaListaProductos_CellDoubleClick);
             // 
             // labelListaProductos
             // 
-            this.labelListaProductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelListaProductos.AutoSize = true;
             this.labelListaProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelListaProductos.ForeColor = System.Drawing.Color.Indigo;
@@ -190,6 +210,8 @@
             // 
             // panelLateralDetalleProducto
             // 
+            this.panelLateralDetalleProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelLateralDetalleProducto.AutoScroll = true;
             this.panelLateralDetalleProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelLateralDetalleProducto.Controls.Add(this.labelMostrarCodigo);
@@ -208,7 +230,6 @@
             this.panelLateralDetalleProducto.Controls.Add(this.pictureBox1);
             this.panelLateralDetalleProducto.Controls.Add(this.pictureBox2);
             this.panelLateralDetalleProducto.Controls.Add(this.pictureBox3);
-            this.panelLateralDetalleProducto.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLateralDetalleProducto.Location = new System.Drawing.Point(0, 0);
             this.panelLateralDetalleProducto.Name = "panelLateralDetalleProducto";
             this.panelLateralDetalleProducto.Size = new System.Drawing.Size(239, 438);
@@ -216,7 +237,6 @@
             // 
             // labelMostrarCodigo
             // 
-            this.labelMostrarCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelMostrarCodigo.AutoSize = true;
             this.labelMostrarCodigo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMostrarCodigo.Location = new System.Drawing.Point(52, 333);
@@ -227,7 +247,6 @@
             // 
             // checkBoxMostrarCodigo
             // 
-            this.checkBoxMostrarCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.checkBoxMostrarCodigo.AutoSize = true;
             this.checkBoxMostrarCodigo.Location = new System.Drawing.Point(31, 333);
             this.checkBoxMostrarCodigo.Name = "checkBoxMostrarCodigo";
@@ -237,11 +256,10 @@
             // 
             // btnGenerarCodigoBarras
             // 
-            this.btnGenerarCodigoBarras.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnGenerarCodigoBarras.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnGenerarCodigoBarras.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnGenerarCodigoBarras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarCodigoBarras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarCodigoBarras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarCodigoBarras.Location = new System.Drawing.Point(13, 287);
             this.btnGenerarCodigoBarras.Name = "btnGenerarCodigoBarras";
             this.btnGenerarCodigoBarras.Size = new System.Drawing.Size(212, 40);
@@ -251,7 +269,6 @@
             // 
             // panelSubMenu
             // 
-            this.panelSubMenu.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSubMenu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelSubMenu.Controls.Add(this.btnEliminar);
             this.panelSubMenu.Controls.Add(this.btnGuardar);
@@ -266,7 +283,7 @@
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(0, 39);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(239, 39);
@@ -280,7 +297,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(0, 0);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(239, 39);
@@ -291,7 +308,6 @@
             // 
             // textBoxValorVenta
             // 
-            this.textBoxValorVenta.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxValorVenta.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxValorVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxValorVenta.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -302,7 +318,6 @@
             // 
             // labelValorVenta
             // 
-            this.labelValorVenta.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelValorVenta.AutoSize = true;
             this.labelValorVenta.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelValorVenta.Location = new System.Drawing.Point(13, 165);
@@ -313,7 +328,6 @@
             // 
             // textBoxDescripcion
             // 
-            this.textBoxDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxDescripcion.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDescripcion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,7 +340,6 @@
             // 
             // labelDescripcion
             // 
-            this.labelDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelDescripcion.AutoSize = true;
             this.labelDescripcion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescripcion.Location = new System.Drawing.Point(13, 213);
@@ -337,7 +350,6 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxNombre.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombre.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -348,7 +360,6 @@
             // 
             // labelNombre
             // 
-            this.labelNombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.Location = new System.Drawing.Point(13, 117);
@@ -359,7 +370,6 @@
             // 
             // textBoxCodigo
             // 
-            this.textBoxCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxCodigo.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCodigo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,7 +380,6 @@
             // 
             // labelCodigo
             // 
-            this.labelCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelCodigo.AutoSize = true;
             this.labelCodigo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodigo.Location = new System.Drawing.Point(13, 69);
@@ -381,7 +390,6 @@
             // 
             // labelDetalleProducto
             // 
-            this.labelDetalleProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelDetalleProducto.AutoSize = true;
             this.labelDetalleProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDetalleProducto.ForeColor = System.Drawing.Color.Indigo;
@@ -390,6 +398,36 @@
             this.labelDetalleProducto.Size = new System.Drawing.Size(194, 24);
             this.labelDetalleProducto.TabIndex = 0;
             this.labelDetalleProducto.Text = "Detalle de Producto";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(214, 4);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 155);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(214, 4);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 203);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(214, 4);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
             // 
             // tabPageCargar
             // 
@@ -432,53 +470,6 @@
             this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
             this.pictureBox5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseMove);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources._64673;
-            this.pictureBox6.Location = new System.Drawing.Point(679, 24);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(22, 20);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
-            this.pictureBox6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseMove);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 4);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox2.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 155);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 4);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox3.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 203);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(214, 4);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,16 +489,16 @@
             this.tabPageNuevo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaListaProductos)).EndInit();
             this.panelLateralDetalleProducto.ResumeLayout(false);
             this.panelLateralDetalleProducto.PerformLayout();
             this.panelSubMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

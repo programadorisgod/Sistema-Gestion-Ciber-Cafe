@@ -25,7 +25,7 @@ namespace Logica
             string Guardado = string.Empty;
             try
             {
-                if (GetByCode(producto) == null)
+                if (GetByCode(producto, -1) == null)
                 {
                     Guardado = repositorioProducto.Guardar(producto);
                     return Guardado;
@@ -42,16 +42,52 @@ namespace Logica
 
             }
         }
-        public Producto GetByCode(Producto producto)
+        public string Edit(Producto productonuevo, int row)
         {
-            ListaProductos = GetAll();
-            foreach (Producto item in ListaProductos)
+            Producto productoviejo = GetByCode(productonuevo, row);
+            try
             {
-                if (item.Codigo == producto.Codigo)
+                if (productoviejo != null)
                 {
-                    return item;
+                    return "Ya existe un producto con este codigo";
+                }
+                else
+                {
+                    ListaProductos[row] = productonuevo;
+                    return repositorioProducto.Actualizar(ListaProductos, false);
+
                 }
             }
+            catch (Exception)
+            {
+                return "Producto no editado";
+            }
+
+        }
+        public Producto GetByCode(Producto producto, int row)
+        {
+            ListaProductos = GetAll();
+            if (row == -1)
+            {
+                foreach (Producto item in ListaProductos)
+                {
+                    if (item.Codigo == producto.Codigo)
+                    {
+                        return item;
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < ListaProductos.Count; i++)
+                {
+                    if (ListaProductos[i].Codigo == producto.Codigo && i != row)
+                    {
+                        return ListaProductos[i];
+                    }
+                }
+            }
+            
             return null;
         }
     }

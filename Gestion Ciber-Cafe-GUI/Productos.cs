@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace Gestion_Ciber_Cafe_GUI
     {
         Entidades.Producto producto = new Entidades.Producto();
         Logica.ServicioProducto servicioProducto = new Logica.ServicioProducto();
+        int row = -1;
         public Productos()
         {
             InitializeComponent();
@@ -35,6 +38,13 @@ namespace Gestion_Ciber_Cafe_GUI
             textBoxValorVenta.Text = "";
             textBoxDescripcion.Text = "";
         }
+        void Llenar(Entidades.Producto producto)
+        {
+            textBoxCodigo.Text = producto.Codigo;
+            textBoxNombre.Text = producto.Nombre;
+            textBoxValorVenta.Text = producto.ValorVenta + "";
+            textBoxDescripcion.Text = producto.Descripcion;
+        }
         void Guardar()
         {
             if (textBoxCodigo.Text == "" || textBoxNombre.Text == "" || textBoxValorVenta.Text == "")
@@ -43,14 +53,28 @@ namespace Gestion_Ciber_Cafe_GUI
             }
             else
             {
-                producto.Codigo = textBoxCodigo.Text;
-                producto.Nombre = textBoxNombre.Text;
-                producto.Descripcion = textBoxDescripcion.Text;
-                producto.ValorVenta = double.Parse(textBoxValorVenta.Text);
-                var Respuesta = MessageBox.Show("Desea guardar el producto?", "Responde...", MessageBoxButtons.YesNo);
-                if (Respuesta == DialogResult.Yes)
+                if (row != -1)
                 {
-                    servicioProducto.Guardar(producto);
+                    producto.Codigo = textBoxCodigo.Text;
+                    producto.Nombre = textBoxNombre.Text;
+                    producto.Descripcion = textBoxDescripcion.Text;
+                    producto.ValorVenta = double.Parse(textBoxValorVenta.Text);
+                    var Respuesta = MessageBox.Show("Desea guardar el producto?", "Responde...", MessageBoxButtons.YesNo);
+                    if (Respuesta == DialogResult.Yes)
+                    {
+                        servicioProducto.Guardar(producto);
+                    }
+                }
+                else
+                {
+                    producto.Codigo = textBoxCodigo.Text;
+                    producto.Nombre = textBoxNombre.Text;
+                    producto.Descripcion = textBoxDescripcion.Text;
+                    producto.ValorVenta = double.Parse(textBoxValorVenta.Text);
+                    var mensaje = servicioProducto.Edit(producto, row);
+                    MessageBox.Show(mensaje);
+                    Limpiar();
+                    textBoxCodigo.Focus();
                 }
             }
         }
@@ -118,6 +142,13 @@ namespace Gestion_Ciber_Cafe_GUI
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void grillaListaProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            row = e.RowIndex;
+            Llenar(servicioProducto.GetAll()[row]);
+
         }
     }
 }
