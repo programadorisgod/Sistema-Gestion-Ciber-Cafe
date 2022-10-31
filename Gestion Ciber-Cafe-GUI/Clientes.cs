@@ -112,7 +112,7 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (p != 1)
+            if (p != -1)
             {
                 dataGridView1.Rows.RemoveAt(p);
                 var mensaje = servicioCliente.Delete(p);

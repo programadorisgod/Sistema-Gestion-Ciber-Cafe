@@ -195,6 +195,7 @@
             this.grillaListaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grillaListaProductos.Size = new System.Drawing.Size(690, 372);
             this.grillaListaProductos.TabIndex = 2;
+            this.grillaListaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaListaProductos_CellClick);
             this.grillaListaProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaListaProductos_CellDoubleClick);
             // 
             // labelListaProductos
@@ -290,6 +291,7 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnGuardar
             // 
@@ -332,11 +334,11 @@
             this.textBoxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDescripcion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescripcion.Location = new System.Drawing.Point(13, 235);
-            this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescripcion.Size = new System.Drawing.Size(212, 46);
+            this.textBoxDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBoxDescripcion.Size = new System.Drawing.Size(212, 23);
             this.textBoxDescripcion.TabIndex = 6;
+            this.textBoxDescripcion.WordWrap = false;
             // 
             // labelDescripcion
             // 

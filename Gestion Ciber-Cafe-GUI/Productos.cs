@@ -53,7 +53,7 @@ namespace Gestion_Ciber_Cafe_GUI
             }
             else
             {
-                if (row != -1)
+                if (row == -1)
                 {
                     producto.Codigo = textBoxCodigo.Text;
                     producto.Nombre = textBoxNombre.Text;
@@ -63,6 +63,8 @@ namespace Gestion_Ciber_Cafe_GUI
                     if (Respuesta == DialogResult.Yes)
                     {
                         servicioProducto.Guardar(producto);
+                        Limpiar();
+                        RefreshLista();
                     }
                 }
                 else
@@ -71,14 +73,28 @@ namespace Gestion_Ciber_Cafe_GUI
                     producto.Nombre = textBoxNombre.Text;
                     producto.Descripcion = textBoxDescripcion.Text;
                     producto.ValorVenta = double.Parse(textBoxValorVenta.Text);
-                    var mensaje = servicioProducto.Edit(producto, row);
-                    MessageBox.Show(mensaje);
-                    Limpiar();
+                    servicioProducto.Edit(producto, row);
                     textBoxCodigo.Focus();
+                    RefreshLista();
+                    Limpiar();
+                    row = -1;
                 }
             }
         }
 
+        void Eliminar()
+        {
+            if (row != -1)
+            {
+                var Respuesta = MessageBox.Show("Desea borrar el producto?", "Responde...", MessageBoxButtons.YesNo);
+                if (Respuesta == DialogResult.Yes)
+                {
+                    servicioProducto.Delete(row);
+                    RefreshLista();
+                    Limpiar();
+                }
+            }
+        }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -129,8 +145,6 @@ namespace Gestion_Ciber_Cafe_GUI
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
-            Limpiar();
-            RefreshLista();
         }
 
         private void Productos_Load(object sender, EventArgs e)
@@ -149,6 +163,17 @@ namespace Gestion_Ciber_Cafe_GUI
             row = e.RowIndex;
             Llenar(servicioProducto.GetAll()[row]);
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Eliminar();
+        }
+
+        private void grillaListaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            row = e.RowIndex;
+            Llenar(servicioProducto.GetAll()[row]);
         }
     }
 }

@@ -42,6 +42,21 @@ namespace Logica
 
             }
         }
+        public string Delete(int row)
+        {
+            try
+            {
+                ListaProductos.RemoveAt(row);
+                repositorioProducto.Actualizar(ListaProductos, false);
+                return "El producto fue eliminado correctamente";
+
+            }
+            catch (Exception)
+            {
+
+                return "El producto no fue eliminado correctamente";
+            }
+        }
         public string Edit(Producto productonuevo, int row)
         {
             Producto productoviejo = GetByCode(productonuevo, row);
